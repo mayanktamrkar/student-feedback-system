@@ -4,6 +4,7 @@ import { useEffect,useState } from 'react'
 
 export default function Show(props) {
     const [items,setItems]=useState([])
+    const [s,sets]=useState("")
     var fun ;
    // console.log("showdata-55--6>",props.data)
     const authtoken=localStorage.getItem("authtoken")
@@ -20,7 +21,9 @@ export default function Show(props) {
        
         }),
       });
+     
       const json = await response.json() 
+      sets(json)
     
 
 
@@ -45,7 +48,7 @@ export default function Show(props) {
     fun()
 
 
-    }, [])
+    }, [s])
     
   return (
     <>

@@ -215,32 +215,6 @@ router.delete('/show', async(req, res) => {
 
     console.log("deleted")
     res.json({ message: "delted" })
-    var tran = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
-        requireTLS: true,
-        auth: {
-            user: 'mayanktamrkar2001@gmail.com',
-            pass: ""
-        }
-
-    })
-    var mailoptions = {
-        from: "mayanktamrkar2001@gmail.com",
-        to: "mayanktamrkar786@gmail.com",
-        sub: "resolve",
-        text: "your complain has been resolve"
-    }
-    tran.sendMail(mailoptions, (err, info) => {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log(info.response)
-            res.json({ message: "mail send" })
-        }
-    })
-
 
 
 })

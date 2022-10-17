@@ -150,7 +150,7 @@ export const Login = (props) => {
 
     <div class="row d-flex justify-content-center">
       <div class="col-lg-8">
-        <h2 class="fw-bold mb-5">Sign up now</h2>
+        <h2 class="fw-bold mb-5">Log in </h2>
 
         
         <form    onSubmit={handleSubmit(passdata)}>

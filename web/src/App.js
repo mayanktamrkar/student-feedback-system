@@ -46,7 +46,7 @@ function App() {
       {localStorage.getItem("user") === "superadmin" ? <User /> : <span></span>}
 
        
-      {loc.pathname=="/"   && m === "normal" || !m  &&  ( m!=="admin" && m!=="superadmin") ?<New/>:<span></span>}
+      {loc.pathname=="/"   && m === "normal" ||  loc.pathname=="/" &&  !m  &&  ( m!=="admin" && m!=="superadmin") ?<New/>:<span></span>}
       <Footer />
     </div>
   );
